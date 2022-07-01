@@ -1,0 +1,11 @@
+// Program that stores, successively, the even integer values 
+// between 21 and 43 in the memory cell in address 90.
+25
+ADD 20 0
+WRITE 90
+MEMADD 2 90
+WRITE 90
+INC -42
+ZJUMP 2
+JUMP -4
+HALT

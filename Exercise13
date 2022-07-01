@@ -1,0 +1,7 @@
+// Question 1
+// To be able to return to the program where we were before raising the interrupt (PC is needed for that)
+// And without losing the data (PSW)
+
+// Question 2
+// We should store the accumulator
+//

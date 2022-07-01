@@ -1,0 +1,4 @@
+// Testing privileged mode (raises exception)
+10
+10
+HALT

@@ -1,0 +1,949 @@
+[0] User program list:
+	Program [./tests_lab12/test01.prog] with arrival time [1]
+	Program [./tests_lab12/test01.prog] with arrival time [2]
+	Program [./tests_lab12/test01.prog] with arrival time [4]
+	Program [./tests_lab12/test01.prog] with arrival time [150]
+	Program [not_existing.prog] with arrival time [270]
+	[0] Main memory state (during system initialization):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+	[0] Arrival Time Queue:
+		[SystemIdleProcess, 0, DAEMONS]
+		[./tests_lab12/test01.prog, 1, USER]
+		[./tests_lab12/test01.prog, 2, USER]
+		[./tests_lab12/test01.prog, 4, USER]
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[0] Main memory state (before allocating memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Process [3 - SystemIdleProcess] requests [4] memory positions
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Partition [0: 0 -> 4] has been asigned to process [3 - SystemIdleProcess]
+	[0] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[0] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 1, USER]
+		[./tests_lab12/test01.prog, 4, USER]
+		[./tests_lab12/test01.prog, 2, USER]
+		[not_existing.prog, 270, USER]
+		[./tests_lab12/test01.prog, 150, USER]
+	[0] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PID: 3, PC: 0, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[2] {01 518 2CD} ADD 1304 717 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[3] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[4] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[5] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[6] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [0 - ./tests_lab12/test01.prog] requests [60] memory positions
+	[7] New process [0 - ./tests_lab12/test01.prog] moving to the [NEW] state
+	[7] Partition [4: 128 -> 64] has been asigned to process [0 - ./tests_lab12/test01.prog]
+	[7] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][0 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [0] created from program [./tests_lab12/test01.prog]
+	[7] Process [0 - ./tests_lab12/test01.prog] moving from the [NEW] state to the [READY] state
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][0 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [1 - ./tests_lab12/test01.prog] requests [60] memory positions
+	[7] New process [1 - ./tests_lab12/test01.prog] moving to the [NEW] state
+	[7] Partition [3: 32 -> 96] has been asigned to process [1 - ./tests_lab12/test01.prog]
+	[7] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][1 - ./tests_lab12/test01.prog]
+		[4] [128 -> 64][0 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [1] created from program [./tests_lab12/test01.prog]
+	[7] Process [1 - ./tests_lab12/test01.prog] moving from the [NEW] state to the [READY] state
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][1 - ./tests_lab12/test01.prog]
+		[4] [128 -> 64][0 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [2 - ./tests_lab12/test01.prog] requests [60] memory positions
+	[7] ERROR: A process could not be created from program [./tests_lab12/test01.prog] because an appropiate partition is not available
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue:
+	USER: [0,2], [1,2]
+	DAEMONS: 
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue:
+	USER: [0,2], [1,2]
+	DAEMONS: 
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[7] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - ./tests_lab12/test01.prog]
+	[7] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[7] Process [0 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[7] Running Process Information:
+		[PID: 0, Priority: 2, WakeUp: 0, Queue: USER]
+	[7] Ready-to-run processes queue:
+	USER: [1,2]
+	DAEMONS: [3,100]
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[8] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[9] {04 004 000} TRAP 4 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[11] Process [0 - ./tests_lab12/test01.prog] will transfer the control of the processor to process [1 - ./tests_lab12/test01.prog]
+	[11] Process [0 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [READY] state
+	[11] Process [1 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[11] Running Process Information:
+		[PID: 1, Priority: 2, WakeUp: 0, Queue: USER]
+	[11] Ready-to-run processes queue:
+	USER: [0,2]
+	DAEMONS: [3,100]
+	[11] SLEEPING Queue:
+		[--- empty queue ---]
+	[11] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[11] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[12] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[13] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[14] Clock interrupt number [2] has occurred
+[15] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[16] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[17] Clock interrupt number [3] has occurred
+[18] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[19] {04 004 000} TRAP 4 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[20] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[21] Process [1 - ./tests_lab12/test01.prog] will transfer the control of the processor to process [0 - ./tests_lab12/test01.prog]
+	[21] Process [1 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [READY] state
+	[21] Process [0 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[21] Running Process Information:
+		[PID: 0, Priority: 2, WakeUp: 0, Queue: USER]
+	[21] Ready-to-run processes queue:
+	USER: [1,2]
+	DAEMONS: [3,100]
+	[21] SLEEPING Queue:
+		[--- empty queue ---]
+	[21] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[21] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[22] {0D 000 000} IRET 0 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[23] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[24] Clock interrupt number [4] has occurred
+[25] {0D 000 000} IRET 0 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[26] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[27] Clock interrupt number [5] has occurred
+[28] {0D 000 000} IRET 0 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[29] {01 00A 811} ADD 10 -17 (PID: 0, PC: 2, Accumulator: -7, PSW: 0004 [-------------N--])
+[30] {04 007 000} TRAP 7 0 (PID: 0, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[31] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[32] Process [0 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[32] Process [1 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[32] Running Process Information:
+		[PID: 1, Priority: 2, WakeUp: 0, Queue: USER]
+	[32] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[32] SLEEPING Queue:
+		[0, 2, 13]
+	[32] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[32] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[33] {0D 000 000} IRET 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[34] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[35] Clock interrupt number [6] has occurred
+[36] {0D 000 000} IRET 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[37] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[38] Clock interrupt number [7] has occurred
+[39] {0D 000 000} IRET 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[40] {01 00A 811} ADD 10 -17 (PID: 1, PC: 2, Accumulator: -7, PSW: 0004 [-------------N--])
+[41] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[42] Clock interrupt number [8] has occurred
+[43] {0D 000 000} IRET 0 0 (PID: 1, PC: 2, Accumulator: -7, PSW: 0004 [-------------N--])
+[44] {04 007 000} TRAP 7 0 (PID: 1, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[45] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[46] Process [1 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[46] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[46] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[46] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[46] SLEEPING Queue:
+		[0, 2, 13], [1, 2, 16]
+	[46] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[46] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[47] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[48] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[49] Clock interrupt number [9] has occurred
+[50] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[51] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[52] Clock interrupt number [10] has occurred
+[53] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[54] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[55] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[56] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[57] Clock interrupt number [11] has occurred
+[58] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[59] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[60] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[61] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[62] Clock interrupt number [12] has occurred
+[63] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[64] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[65] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[66] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[67] Clock interrupt number [13] has occurred
+	[67] Process [0 - ./tests_lab12/test01.prog] moving from the [BLOCKED] state to the [READY] state
+	[67] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[67] Ready-to-run processes queue:
+	USER: [0,2]
+	DAEMONS: 
+	[67] SLEEPING Queue:
+		[1, 2, 16]
+	[67] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[67] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[67] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - ./tests_lab12/test01.prog]
+	[67] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[67] Process [0 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[67] Running Process Information:
+		[PID: 0, Priority: 2, WakeUp: 13, Queue: USER]
+	[67] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[67] SLEEPING Queue:
+		[1, 2, 16]
+	[67] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[67] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[68] {0D 000 000} IRET 0 0 (PID: 0, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[69] {04 004 000} TRAP 4 0 (PID: 0, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[70] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+[72] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[73] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[74] Clock interrupt number [14] has occurred
+[75] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[76] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[77] Clock interrupt number [15] has occurred
+[78] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[79] {04 007 000} TRAP 7 0 (PID: 0, PC: 5, Accumulator: -7, PSW: 0004 [-------------N--])
+[80] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[81] Process [0 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[81] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[81] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[81] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[81] SLEEPING Queue:
+		[1, 2, 16], [0, 2, 23]
+	[81] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[81] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[82] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[83] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[84] Clock interrupt number [16] has occurred
+	[84] Process [1 - ./tests_lab12/test01.prog] moving from the [BLOCKED] state to the [READY] state
+	[84] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[84] Ready-to-run processes queue:
+	USER: [1,2]
+	DAEMONS: 
+	[84] SLEEPING Queue:
+		[0, 2, 23]
+	[84] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[84] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[84] Process [3 - SystemIdleProcess] is thrown out of the processor by process [1 - ./tests_lab12/test01.prog]
+	[84] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[84] Process [1 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[84] Running Process Information:
+		[PID: 1, Priority: 2, WakeUp: 16, Queue: USER]
+	[84] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[84] SLEEPING Queue:
+		[0, 2, 23]
+	[84] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[84] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[85] {0D 000 000} IRET 0 0 (PID: 1, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[86] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[87] Clock interrupt number [17] has occurred
+[88] {0D 000 000} IRET 0 0 (PID: 1, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[89] {04 004 000} TRAP 4 0 (PID: 1, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[90] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+[92] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[93] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[94] Clock interrupt number [18] has occurred
+[95] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[96] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[97] Clock interrupt number [19] has occurred
+[98] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[99] {04 007 000} TRAP 7 0 (PID: 1, PC: 5, Accumulator: -7, PSW: 0004 [-------------N--])
+[100] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[101] Process [1 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[101] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[101] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[101] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[101] SLEEPING Queue:
+		[0, 2, 23], [1, 2, 27]
+	[101] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[101] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[102] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[103] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[104] Clock interrupt number [20] has occurred
+[105] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[106] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[107] Clock interrupt number [21] has occurred
+[108] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[109] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[110] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[111] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[112] Clock interrupt number [22] has occurred
+[113] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[114] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[115] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[116] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[117] Clock interrupt number [23] has occurred
+	[117] Process [0 - ./tests_lab12/test01.prog] moving from the [BLOCKED] state to the [READY] state
+	[117] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[117] Ready-to-run processes queue:
+	USER: [0,2]
+	DAEMONS: 
+	[117] SLEEPING Queue:
+		[1, 2, 27]
+	[117] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[117] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[117] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - ./tests_lab12/test01.prog]
+	[117] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[117] Process [0 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[117] Running Process Information:
+		[PID: 0, Priority: 2, WakeUp: 23, Queue: USER]
+	[117] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[117] SLEEPING Queue:
+		[1, 2, 27]
+	[117] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[117] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[118] {0D 000 000} IRET 0 0 (PID: 0, PC: 5, Accumulator: -7, PSW: 0004 [-------------N--])
+[119] {04 003 000} TRAP 3 0 (PID: 0, PC: 6, Accumulator: -7, PSW: 0004 [-------------N--])
+[120] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[121] Process [0 - ./tests_lab12/test01.prog] has requested to terminate
+	[121] Process [0 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[121] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][1 - ./tests_lab12/test01.prog]
+		[4] [128 -> 64][0 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[121] Partition [4: 128 -> 64] used by process [0 - ./tests_lab12/test01.prog] has been released
+	[121] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][1 - ./tests_lab12/test01.prog]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[121] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[121] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[121] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[121] SLEEPING Queue:
+		[1, 2, 27]
+	[121] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[121] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[122] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[123] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[124] Clock interrupt number [24] has occurred
+[125] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[126] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[127] Clock interrupt number [25] has occurred
+[128] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[129] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[130] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[131] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[132] Clock interrupt number [26] has occurred
+[133] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[134] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[135] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[136] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[137] Clock interrupt number [27] has occurred
+	[137] Process [1 - ./tests_lab12/test01.prog] moving from the [BLOCKED] state to the [READY] state
+	[137] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[137] Ready-to-run processes queue:
+	USER: [1,2]
+	DAEMONS: 
+	[137] SLEEPING Queue:
+		[--- empty queue ---]
+	[137] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[137] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+	[137] Process [3 - SystemIdleProcess] is thrown out of the processor by process [1 - ./tests_lab12/test01.prog]
+	[137] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[137] Process [1 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[137] Running Process Information:
+		[PID: 1, Priority: 2, WakeUp: 27, Queue: USER]
+	[137] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[137] SLEEPING Queue:
+		[--- empty queue ---]
+	[137] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[137] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[138] {0D 000 000} IRET 0 0 (PID: 1, PC: 5, Accumulator: -7, PSW: 0004 [-------------N--])
+[139] {04 003 000} TRAP 3 0 (PID: 1, PC: 6, Accumulator: -7, PSW: 0004 [-------------N--])
+[140] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[141] Process [1 - ./tests_lab12/test01.prog] has requested to terminate
+	[141] Process [1 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[141] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][1 - ./tests_lab12/test01.prog]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[141] Partition [3: 32 -> 96] used by process [1 - ./tests_lab12/test01.prog] has been released
+	[141] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[141] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[141] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[141] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[141] SLEEPING Queue:
+		[--- empty queue ---]
+	[141] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[141] Arrival Time Queue:
+		[./tests_lab12/test01.prog, 150, USER]
+		[not_existing.prog, 270, USER]
+[142] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[143] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[144] Clock interrupt number [28] has occurred
+[145] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[146] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[147] Clock interrupt number [29] has occurred
+[148] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[149] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[150] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[151] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[152] Clock interrupt number [30] has occurred
+	[152] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[152] Process [2 - ./tests_lab12/test01.prog] requests [60] memory positions
+	[152] New process [2 - ./tests_lab12/test01.prog] moving to the [NEW] state
+	[152] Partition [4: 128 -> 64] has been asigned to process [2 - ./tests_lab12/test01.prog]
+	[152] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][2 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[152] Process [2] created from program [./tests_lab12/test01.prog]
+	[152] Process [2 - ./tests_lab12/test01.prog] moving from the [NEW] state to the [READY] state
+	[152] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[152] Ready-to-run processes queue:
+	USER: [2,2]
+	DAEMONS: 
+	[152] SLEEPING Queue:
+		[--- empty queue ---]
+	[152] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[152] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+	[152] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[152] Ready-to-run processes queue:
+	USER: [2,2]
+	DAEMONS: 
+	[152] SLEEPING Queue:
+		[--- empty queue ---]
+	[152] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[152] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+	[152] Process [3 - SystemIdleProcess] is thrown out of the processor by process [2 - ./tests_lab12/test01.prog]
+	[152] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[152] Process [2 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[152] Running Process Information:
+		[PID: 2, Priority: 2, WakeUp: 0, Queue: USER]
+	[152] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[152] SLEEPING Queue:
+		[--- empty queue ---]
+	[152] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[152] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+[153] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[154] {04 004 000} TRAP 4 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[155] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+[157] {0D 000 000} IRET 0 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[158] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[159] Clock interrupt number [31] has occurred
+[160] {0D 000 000} IRET 0 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[161] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[162] Clock interrupt number [32] has occurred
+[163] {0D 000 000} IRET 0 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[164] {01 00A 811} ADD 10 -17 (PID: 2, PC: 2, Accumulator: -7, PSW: 0004 [-------------N--])
+[165] {04 007 000} TRAP 7 0 (PID: 2, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[166] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[167] Process [2 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[167] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[167] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[167] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[167] SLEEPING Queue:
+		[2, 2, 40]
+	[167] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[167] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+[168] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[169] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[170] Clock interrupt number [33] has occurred
+[171] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[172] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[173] Clock interrupt number [34] has occurred
+[174] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[175] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[176] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[177] Clock interrupt number [35] has occurred
+[178] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[179] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[180] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[181] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[182] Clock interrupt number [36] has occurred
+[183] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[184] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[185] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[186] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[187] Clock interrupt number [37] has occurred
+[188] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[189] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[190] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[191] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[192] Clock interrupt number [38] has occurred
+[193] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[194] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[195] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[196] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[197] Clock interrupt number [39] has occurred
+[198] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[199] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[200] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[201] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[202] Clock interrupt number [40] has occurred
+	[202] Process [2 - ./tests_lab12/test01.prog] moving from the [BLOCKED] state to the [READY] state
+	[202] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[202] Ready-to-run processes queue:
+	USER: [2,2]
+	DAEMONS: 
+	[202] SLEEPING Queue:
+		[--- empty queue ---]
+	[202] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[202] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+	[202] Process [3 - SystemIdleProcess] is thrown out of the processor by process [2 - ./tests_lab12/test01.prog]
+	[202] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[202] Process [2 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[202] Running Process Information:
+		[PID: 2, Priority: 2, WakeUp: 40, Queue: USER]
+	[202] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[202] SLEEPING Queue:
+		[--- empty queue ---]
+	[202] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[202] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+[203] {0D 000 000} IRET 0 0 (PID: 2, PC: 3, Accumulator: -7, PSW: 0004 [-------------N--])
+[204] {04 004 000} TRAP 4 0 (PID: 2, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[205] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+[207] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[208] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[209] Clock interrupt number [41] has occurred
+[210] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[211] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[212] Clock interrupt number [42] has occurred
+[213] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: -7, PSW: 0004 [-------------N--])
+[214] {04 007 000} TRAP 7 0 (PID: 2, PC: 5, Accumulator: -7, PSW: 0004 [-------------N--])
+[215] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[216] Process [2 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[216] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[216] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[216] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[216] SLEEPING Queue:
+		[2, 2, 50]
+	[216] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[216] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+[217] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[218] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[219] Clock interrupt number [43] has occurred
+[220] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[221] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[222] Clock interrupt number [44] has occurred
+[223] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[224] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[225] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[226] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[227] Clock interrupt number [45] has occurred
+[228] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[229] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[230] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[231] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[232] Clock interrupt number [46] has occurred
+[233] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[234] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[235] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[236] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[237] Clock interrupt number [47] has occurred
+[238] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[239] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[240] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[241] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[242] Clock interrupt number [48] has occurred
+[243] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[244] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[245] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[246] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[247] Clock interrupt number [49] has occurred
+[248] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[249] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[250] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[251] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[252] Clock interrupt number [50] has occurred
+	[252] Process [2 - ./tests_lab12/test01.prog] moving from the [BLOCKED] state to the [READY] state
+	[252] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[252] Ready-to-run processes queue:
+	USER: [2,2]
+	DAEMONS: 
+	[252] SLEEPING Queue:
+		[--- empty queue ---]
+	[252] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[252] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+	[252] Process [3 - SystemIdleProcess] is thrown out of the processor by process [2 - ./tests_lab12/test01.prog]
+	[252] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[252] Process [2 - ./tests_lab12/test01.prog] moving from the [READY] state to the [EXECUTING] state
+	[252] Running Process Information:
+		[PID: 2, Priority: 2, WakeUp: 50, Queue: USER]
+	[252] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[252] SLEEPING Queue:
+		[--- empty queue ---]
+	[252] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[252] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+[253] {0D 000 000} IRET 0 0 (PID: 2, PC: 5, Accumulator: -7, PSW: 0004 [-------------N--])
+[254] {04 003 000} TRAP 3 0 (PID: 2, PC: 6, Accumulator: -7, PSW: 0004 [-------------N--])
+[255] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -7, PSW: 8084 [M-------X----N--])
+	[256] Process [2 - ./tests_lab12/test01.prog] has requested to terminate
+	[256] Process [2 - ./tests_lab12/test01.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[256] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][2 - ./tests_lab12/test01.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[256] Partition [4: 128 -> 64] used by process [2 - ./tests_lab12/test01.prog] has been released
+	[256] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[256] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[256] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[256] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[256] SLEEPING Queue:
+		[--- empty queue ---]
+	[256] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test01.prog
+		PID: 1 -> ./tests_lab12/test01.prog
+		PID: 2 -> ./tests_lab12/test01.prog
+		PID: 3 -> SystemIdleProcess
+	[256] Arrival Time Queue:
+		[not_existing.prog, 270, USER]
+[257] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[258] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[259] Clock interrupt number [51] has occurred
+[260] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[261] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[262] Clock interrupt number [52] has occurred
+[263] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[264] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[265] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[266] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[267] Clock interrupt number [53] has occurred
+[268] {0D 000 000} IRET 0 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[269] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[270] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[271] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[272] Clock interrupt number [54] has occurred
+	[272] Zombie process [0 -> ./tests_lab12/test01.prog], with size [60] and initial address [128] is removed from system
+	[272] Zombie process [1 -> ./tests_lab12/test01.prog], with size [60] and initial address [32] is removed from system
+	[272] Zombie process [2 -> ./tests_lab12/test01.prog], with size [60] and initial address [128] is removed from system
+	[272] ERROR: Program [not_existing.prog] is not valid [-- it does not exist --]
+[273] {0D 000 000} IRET 0 0 (PID: 3, PC: 3, Accumulator: 2021, PSW: 0080 [--------X-------])
+[274] {04 003 000} TRAP 3 0 (PID: 3, PC: 4, Accumulator: 2021, PSW: 0080 [--------X-------])
+[275] {0C 002 000} OS 2 0 (PID: 3, PC: 242, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[276] Process [3 - SystemIdleProcess] has requested to terminate
+	[276] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+	[276] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[276] Partition [0: 0 -> 4] used by process [3 - SystemIdleProcess] has been released
+	[276] Main memory state (after releasing memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[276] The system will shut down now...
+	[276] Running Process Information:
+		[--- No running process ---]
+	[276] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[276] SLEEPING Queue:
+		[--- empty queue ---]
+	[276] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+[277] {0D 000 000} IRET 0 0 (PID: -1, PC: 241, Accumulator: 2021, PSW: 8080 [M-------X-------])
+[278] {0B 000 000} HALT 0 0 (PID: -1, PC: 241, Accumulator: 2021, PSW: 8081 [M-------X------S])
+[278] END of the simulation

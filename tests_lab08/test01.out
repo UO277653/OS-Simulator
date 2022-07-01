@@ -1,0 +1,59 @@
+[0] User program list:
+	Program [./tests_lab08/test01.prog] with arrival time [0]
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[0] New process [0 - ./tests_lab08/test01.prog] moving to the [NEW] state
+	[0] Process [0] created from program [./tests_lab08/test01.prog]
+	[0] Process [0 - ./tests_lab08/test01.prog] moving from the [NEW] state to the [READY] state
+	[0] Ready-to-run processes queue:
+	USER: [0,2]
+	DAEMONS: [3,100]
+	[0] Process [0 - ./tests_lab08/test01.prog] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[2] {05 000 000} NOP 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[3] {05 000 000} NOP 0 0 (PC: 2, Accumulator: 0, PSW: 0002 [--------------Z-])
+[4] {05 000 000} NOP 0 0 (PC: 3, Accumulator: 0, PSW: 0002 [--------------Z-])
+[5] {05 000 000} NOP 0 0 (PC: 4, Accumulator: 0, PSW: 0002 [--------------Z-])
+[6] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[7] Clock interrupt number [1] has occurred
+[8] {0D 000 000} IRET 0 0 (PC: 4, Accumulator: 0, PSW: 0002 [--------------Z-])
+[9] {05 000 000} NOP 0 0 (PC: 5, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {05 000 000} NOP 0 0 (PC: 6, Accumulator: 0, PSW: 0002 [--------------Z-])
+[11] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[12] Clock interrupt number [2] has occurred
+[13] {0D 000 000} IRET 0 0 (PC: 6, Accumulator: 0, PSW: 0002 [--------------Z-])
+[14] {05 000 000} NOP 0 0 (PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[15] {05 000 000} NOP 0 0 (PC: 8, Accumulator: 0, PSW: 0002 [--------------Z-])
+[16] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[17] Clock interrupt number [3] has occurred
+[18] {0D 000 000} IRET 0 0 (PC: 8, Accumulator: 0, PSW: 0002 [--------------Z-])
+[19] {04 003 000} TRAP 3 0 (PC: 9, Accumulator: 0, PSW: 0002 [--------------Z-])
+[20] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[21] Process [0 - ./tests_lab08/test01.prog] has requested to terminate
+	[21] Process [0 - ./tests_lab08/test01.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[21] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+[22] {0D 000 000} IRET 0 0 (PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[23] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[24] Clock interrupt number [4] has occurred
+[25] {0D 000 000} IRET 0 0 (PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[26] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[27] Clock interrupt number [5] has occurred
+[28] {0D 000 000} IRET 0 0 (PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[29] {04 003 000} TRAP 3 0 (PC: 184, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[30] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[31] Process [3 - SystemIdleProcess] has requested to terminate
+	[31] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+	[31] The system will shut down now...
+[32] {0D 000 000} IRET 0 0 (PC: 241, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[33] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[34] Clock interrupt number [6] has occurred
+[35] {0D 000 000} IRET 0 0 (PC: 241, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[36] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[37] Clock interrupt number [7] has occurred
+[38] {0D 000 000} IRET 0 0 (PC: 241, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[39] {0B 000 000} HALT 0 0 (PC: 241, Accumulator: 0, PSW: 0083 [--------X-----ZS])
+[39] END of the simulation

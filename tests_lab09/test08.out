@@ -1,0 +1,166 @@
+[0] User program list:
+	Program [./tests_lab09/test08_1.prog] with arrival time [0]
+	Program [./tests_lab09/test08_2.prog] with arrival time [0]
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] New process [0 - ./tests_lab09/test08_1.prog] moving to the [NEW] state
+	[0] Process [0] created from program [./tests_lab09/test08_1.prog]
+	[0] Process [0 - ./tests_lab09/test08_1.prog] moving from the [NEW] state to the [READY] state
+	[0] New process [1 - ./tests_lab09/test08_2.prog] moving to the [NEW] state
+	[0] Process [1] created from program [./tests_lab09/test08_2.prog]
+	[0] Process [1 - ./tests_lab09/test08_2.prog] moving from the [NEW] state to the [READY] state
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: [1,5], [0,10]
+	DAEMONS: [3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+	[0] Process [1 - ./tests_lab09/test08_2.prog] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[2] {01 000 803} ADD 0 -3 (PC: 1, Accumulator: -3, PSW: 0004 [-------------N--])
+[3] {04 007 000} TRAP 7 0 (PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[4] {0C 002 000} OS 2 0 (PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[5] Process [1 - ./tests_lab09/test08_2.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[5] Process [0 - ./tests_lab09/test08_1.prog] moving from the [READY] state to the [EXECUTING] state
+	[5] Running Process Information:
+		[PID: 0, Priority: 10, WakeUp: 0, Queue: USER]
+	[5] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[5] SLEEPING Queue:
+		[1, 5, 4]
+	[5] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+[6] {0D 000 000} IRET 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[7] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[8] Clock interrupt number [1] has occurred
+[9] {0D 000 000} IRET 0 0 (PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {01 000 000} ADD 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[11] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[12] Clock interrupt number [2] has occurred
+[13] {0D 000 000} IRET 0 0 (PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[14] {0A 001 000} INC 1 0 (PC: 2, Accumulator: 1, PSW: 0000 [----------------])
+[15] {0A 002 000} INC 2 0 (PC: 3, Accumulator: 3, PSW: 0000 [----------------])
+[16] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 3, PSW: 8080 [M-------X-------])
+	[17] Clock interrupt number [3] has occurred
+[18] {0D 000 000} IRET 0 0 (PC: 3, Accumulator: 3, PSW: 0000 [----------------])
+[19] {0A 003 000} INC 3 0 (PC: 4, Accumulator: 6, PSW: 0000 [----------------])
+[20] {0A 004 000} INC 4 0 (PC: 5, Accumulator: 10, PSW: 0000 [----------------])
+[21] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[22] Clock interrupt number [4] has occurred
+	[22] Process [1 - ./tests_lab09/test08_2.prog] moving from the [BLOCKED] state to the [READY] state
+	[22] Running Process Information:
+		[PID: 0, Priority: 10, WakeUp: 0, Queue: USER]
+	[22] Ready-to-run processes queue:
+	USER: [1,5]
+	DAEMONS: [3,100]
+	[22] SLEEPING Queue:
+		[--- empty queue ---]
+	[22] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+	[22] Process [0 - ./tests_lab09/test08_1.prog] is thrown out of the processor by process [1 - ./tests_lab09/test08_2.prog]
+	[22] Process [0 - ./tests_lab09/test08_1.prog] moving from the [EXECUTING] state to the [READY] state
+	[22] Process [1 - ./tests_lab09/test08_2.prog] moving from the [READY] state to the [EXECUTING] state
+	[22] Running Process Information:
+		[PID: 1, Priority: 5, WakeUp: 4, Queue: USER]
+	[22] Ready-to-run processes queue:
+	USER: [0,10]
+	DAEMONS: [3,100]
+	[22] SLEEPING Queue:
+		[--- empty queue ---]
+	[22] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+[23] {0D 000 000} IRET 0 0 (PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[24] {01 000 001} ADD 0 1 (PC: 3, Accumulator: 1, PSW: 0000 [----------------])
+[25] {01 001 002} ADD 1 2 (PC: 4, Accumulator: 3, PSW: 0000 [----------------])
+[26] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 3, PSW: 8080 [M-------X-------])
+	[27] Clock interrupt number [5] has occurred
+[28] {0D 000 000} IRET 0 0 (PC: 4, Accumulator: 3, PSW: 0000 [----------------])
+[29] {04 003 000} TRAP 3 0 (PC: 5, Accumulator: 3, PSW: 0000 [----------------])
+[30] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 3, PSW: 8080 [M-------X-------])
+	[31] Process [1 - ./tests_lab09/test08_2.prog] has requested to terminate
+	[31] Process [1 - ./tests_lab09/test08_2.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[31] Process [0 - ./tests_lab09/test08_1.prog] moving from the [READY] state to the [EXECUTING] state
+	[31] Running Process Information:
+		[PID: 0, Priority: 10, WakeUp: 0, Queue: USER]
+	[31] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[31] SLEEPING Queue:
+		[--- empty queue ---]
+	[31] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+[32] {0D 000 000} IRET 0 0 (PC: 5, Accumulator: 10, PSW: 0000 [----------------])
+[33] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[34] Clock interrupt number [6] has occurred
+[35] {0D 000 000} IRET 0 0 (PC: 5, Accumulator: 10, PSW: 0000 [----------------])
+[36] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[37] Clock interrupt number [7] has occurred
+[38] {0D 000 000} IRET 0 0 (PC: 5, Accumulator: 10, PSW: 0000 [----------------])
+[39] {0A 005 000} INC 5 0 (PC: 6, Accumulator: 15, PSW: 0000 [----------------])
+[40] {0A 006 000} INC 6 0 (PC: 7, Accumulator: 21, PSW: 0000 [----------------])
+[41] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 21, PSW: 8080 [M-------X-------])
+	[42] Clock interrupt number [8] has occurred
+[43] {0D 000 000} IRET 0 0 (PC: 7, Accumulator: 21, PSW: 0000 [----------------])
+[44] {04 003 000} TRAP 3 0 (PC: 8, Accumulator: 21, PSW: 0000 [----------------])
+[45] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 21, PSW: 8080 [M-------X-------])
+	[46] Process [0 - ./tests_lab09/test08_1.prog] has requested to terminate
+	[46] Process [0 - ./tests_lab09/test08_1.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[46] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[46] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[46] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[46] SLEEPING Queue:
+		[--- empty queue ---]
+	[46] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+[47] {0D 000 000} IRET 0 0 (PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[48] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[49] Clock interrupt number [9] has occurred
+[50] {0D 000 000} IRET 0 0 (PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[51] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[52] Clock interrupt number [10] has occurred
+[53] {0D 000 000} IRET 0 0 (PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[54] {04 003 000} TRAP 3 0 (PC: 184, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[55] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[56] Process [3 - SystemIdleProcess] has requested to terminate
+	[56] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+	[56] The system will shut down now...
+	[56] Running Process Information:
+		[--- No running process ---]
+	[56] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[56] SLEEPING Queue:
+		[--- empty queue ---]
+	[56] PID association with program's name:
+		PID: 0 -> ./tests_lab09/test08_1.prog
+		PID: 1 -> ./tests_lab09/test08_2.prog
+		PID: 3 -> SystemIdleProcess
+[57] {0D 000 000} IRET 0 0 (PC: 241, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[58] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[59] Clock interrupt number [11] has occurred
+[60] {0D 000 000} IRET 0 0 (PC: 241, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[61] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[62] Clock interrupt number [12] has occurred
+[63] {0D 000 000} IRET 0 0 (PC: 241, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[64] {0B 000 000} HALT 0 0 (PC: 241, Accumulator: 0, PSW: 0083 [--------X-----ZS])
+[64] END of the simulation

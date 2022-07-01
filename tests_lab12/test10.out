@@ -1,0 +1,190 @@
+[0] User program list:
+	Program [./tests_lab12/test10.prog] with arrival time [1]
+	[0] Main memory state (during system initialization):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+	[0] Arrival Time Queue:
+		[SystemIdleProcess, 0, DAEMONS]
+		[./tests_lab12/test10.prog, 1, USER]
+	[0] Main memory state (before allocating memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Process [3 - SystemIdleProcess] requests [4] memory positions
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Partition [0: 0 -> 4] has been asigned to process [3 - SystemIdleProcess]
+	[0] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[0] Arrival Time Queue:
+		[./tests_lab12/test10.prog, 1, USER]
+	[0] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PID: 3, PC: 0, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[2] {01 518 2CD} ADD 1304 717 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[3] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[4] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[5] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[6] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [0 - ./tests_lab12/test10.prog] requests [30] memory positions
+	[7] New process [0 - ./tests_lab12/test10.prog] moving to the [NEW] state
+	[7] Partition [6: 208 -> 32] has been asigned to process [0 - ./tests_lab12/test10.prog]
+	[7] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test10.prog]
+	[7] Process [0] created from program [./tests_lab12/test10.prog]
+	[7] Process [0 - ./tests_lab12/test10.prog] moving from the [NEW] state to the [READY] state
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue:
+	USER: [0,5]
+	DAEMONS: 
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test10.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue:
+	USER: [0,5]
+	DAEMONS: 
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test10.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - ./tests_lab12/test10.prog]
+	[7] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[7] Process [0 - ./tests_lab12/test10.prog] moving from the [READY] state to the [EXECUTING] state
+	[7] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[7] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test10.prog
+		PID: 3 -> SystemIdleProcess
+[8] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[9] {00 000 000} NONEXISTING_INSTRUCTION 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {0C 006 000} OS 6 0 (PID: 0, PC: 244, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[11] Process [0 - ./tests_lab12/test10.prog] has caused an exception (invalid instruction) and is being terminated
+	[11] Process [0 - ./tests_lab12/test10.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[11] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test10.prog]
+	[11] Partition [6: 208 -> 32] used by process [0 - ./tests_lab12/test10.prog] has been released
+	[11] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[11] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[11] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[11] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[11] SLEEPING Queue:
+		[--- empty queue ---]
+	[11] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test10.prog
+		PID: 3 -> SystemIdleProcess
+[12] {0D 000 000} IRET 0 0 (PID: 3, PC: 3, Accumulator: 2021, PSW: 0080 [--------X-------])
+[13] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[14] Clock interrupt number [2] has occurred
+[15] {0D 000 000} IRET 0 0 (PID: 3, PC: 3, Accumulator: 2021, PSW: 0080 [--------X-------])
+[16] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[17] Clock interrupt number [3] has occurred
+[18] {0D 000 000} IRET 0 0 (PID: 3, PC: 3, Accumulator: 2021, PSW: 0080 [--------X-------])
+[19] {04 003 000} TRAP 3 0 (PID: 3, PC: 4, Accumulator: 2021, PSW: 0080 [--------X-------])
+[20] {0C 002 000} OS 2 0 (PID: 3, PC: 242, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[21] Process [3 - SystemIdleProcess] has requested to terminate
+	[21] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+	[21] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[21] Partition [0: 0 -> 4] used by process [3 - SystemIdleProcess] has been released
+	[21] Main memory state (after releasing memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[21] The system will shut down now...
+	[21] Running Process Information:
+		[--- No running process ---]
+	[21] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[21] SLEEPING Queue:
+		[--- empty queue ---]
+	[21] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test10.prog
+		PID: 3 -> SystemIdleProcess
+[22] {0D 000 000} IRET 0 0 (PID: -1, PC: 241, Accumulator: 2021, PSW: 8080 [M-------X-------])
+[23] {0B 000 000} HALT 0 0 (PID: -1, PC: 241, Accumulator: 2021, PSW: 8081 [M-------X------S])
+[23] END of the simulation

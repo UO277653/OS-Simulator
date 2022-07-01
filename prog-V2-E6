@@ -1,0 +1,6 @@
+// This program is for testing the functionality implemented in exercise 6 of the second version of the simulator
+10
+10 
+ADD 30 30
+TRAP 7
+TRAP 3

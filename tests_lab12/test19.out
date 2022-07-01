@@ -1,0 +1,764 @@
+[0] User program list:
+	Program [./tests_lab12/test19_1.prog] with arrival time [1]
+	Program [./tests_lab12/test19_2.prog] with arrival time [2]
+	Program [./tests_lab12/test19_1.prog] with arrival time [4]
+	Program [not_existing.prog] with arrival time [10]
+	Program [./tests_lab12/test19_2.prog] with arrival time [150]
+	Program [./tests_lab12/test19_3.prog] with arrival time [270]
+	[0] Main memory state (during system initialization):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+	[0] Arrival Time Queue:
+		[SystemIdleProcess, 0, DAEMONS]
+		[./tests_lab12/test19_1.prog, 1, USER]
+		[./tests_lab12/test19_2.prog, 2, USER]
+		[./tests_lab12/test19_1.prog, 4, USER]
+		[not_existing.prog, 10, USER]
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+	[0] Main memory state (before allocating memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Process [3 - SystemIdleProcess] requests [4] memory positions
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Partition [0: 0 -> 4] has been asigned to process [3 - SystemIdleProcess]
+	[0] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[0] Arrival Time Queue:
+		[./tests_lab12/test19_1.prog, 1, USER]
+		[./tests_lab12/test19_1.prog, 4, USER]
+		[./tests_lab12/test19_2.prog, 2, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+		[not_existing.prog, 10, USER]
+		[./tests_lab12/test19_2.prog, 150, USER]
+	[0] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PID: 3, PC: 0, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[2] {01 518 2CD} ADD 1304 717 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[3] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[4] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[5] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[6] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[7] Process [0 - ./tests_lab12/test19_1.prog] requests [30] memory positions
+	[7] New process [0 - ./tests_lab12/test19_1.prog] moving to the [NEW] state
+	[7] Partition [6: 208 -> 32] has been asigned to process [0 - ./tests_lab12/test19_1.prog]
+	[7] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_1.prog]
+	[7] Process [0] created from program [./tests_lab12/test19_1.prog]
+	[7] Process [0 - ./tests_lab12/test19_1.prog] moving from the [NEW] state to the [READY] state
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_1.prog]
+	[7] Process [1 - ./tests_lab12/test19_2.prog] requests [30] memory positions
+	[7] New process [1 - ./tests_lab12/test19_2.prog] moving to the [NEW] state
+	[7] Partition [4: 128 -> 64] has been asigned to process [1 - ./tests_lab12/test19_2.prog]
+	[7] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][1 - ./tests_lab12/test19_2.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_1.prog]
+	[7] Process [1] created from program [./tests_lab12/test19_2.prog]
+	[7] Process [1 - ./tests_lab12/test19_2.prog] moving from the [NEW] state to the [READY] state
+	[7] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][1 - ./tests_lab12/test19_2.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_1.prog]
+	[7] Process [2 - ./tests_lab12/test19_1.prog] requests [30] memory positions
+	[7] New process [2 - ./tests_lab12/test19_1.prog] moving to the [NEW] state
+	[7] Partition [3: 32 -> 96] has been asigned to process [2 - ./tests_lab12/test19_1.prog]
+	[7] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][1 - ./tests_lab12/test19_2.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_1.prog]
+	[7] Process [2] created from program [./tests_lab12/test19_1.prog]
+	[7] Process [2 - ./tests_lab12/test19_1.prog] moving from the [NEW] state to the [READY] state
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue:
+	USER: [0,5], [1,5], [2,5]
+	DAEMONS: 
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[not_existing.prog, 10, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+		[./tests_lab12/test19_2.prog, 150, USER]
+	[7] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[7] Ready-to-run processes queue:
+	USER: [0,5], [1,5], [2,5]
+	DAEMONS: 
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[not_existing.prog, 10, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+		[./tests_lab12/test19_2.prog, 150, USER]
+	[7] Process [3 - SystemIdleProcess] is thrown out of the processor by process [0 - ./tests_lab12/test19_1.prog]
+	[7] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[7] Process [0 - ./tests_lab12/test19_1.prog] moving from the [READY] state to the [EXECUTING] state
+	[7] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[7] Ready-to-run processes queue:
+	USER: [1,5], [2,5]
+	DAEMONS: [3,100]
+	[7] SLEEPING Queue:
+		[--- empty queue ---]
+	[7] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[7] Arrival Time Queue:
+		[not_existing.prog, 10, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+		[./tests_lab12/test19_2.prog, 150, USER]
+[8] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[9] {05 000 000} NOP 0 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {01 00A 80D} ADD 10 -13 (PID: 0, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[11] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[12] Clock interrupt number [2] has occurred
+	[12] ERROR: There are not free entries in the process table for the program [not_existing.prog]
+[13] {0D 000 000} IRET 0 0 (PID: 0, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[14] {08 00F 000} WRITE 15 0 (PID: 0, PC: 3, Accumulator: -3, PSW: 0004 [-------------N--])
+[15] {04 005 000} TRAP 5 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[16] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[17] Process [0 - ./tests_lab12/test19_1.prog] has the processor assigned
+[18] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[19] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[20] Clock interrupt number [3] has occurred
+[21] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[22] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[23] Clock interrupt number [4] has occurred
+[24] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[25] {04 007 000} TRAP 7 0 (PID: 0, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[26] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[27] Process [0 - ./tests_lab12/test19_1.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[27] Process [1 - ./tests_lab12/test19_2.prog] moving from the [READY] state to the [EXECUTING] state
+	[27] Running Process Information:
+		[PID: 1, Priority: 5, WakeUp: 0, Queue: USER]
+	[27] Ready-to-run processes queue:
+	USER: [2,5]
+	DAEMONS: [3,100]
+	[27] SLEEPING Queue:
+		[0, 5, 8]
+	[27] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[27] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[28] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[29] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[30] Clock interrupt number [5] has occurred
+[31] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[32] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[33] Clock interrupt number [6] has occurred
+[34] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[35] {05 000 000} NOP 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[36] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[37] Clock interrupt number [7] has occurred
+[38] {0D 000 000} IRET 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[39] {01 00A 80D} ADD 10 -13 (PID: 1, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[40] {08 00F 000} WRITE 15 0 (PID: 1, PC: 3, Accumulator: -3, PSW: 0004 [-------------N--])
+[41] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[42] Clock interrupt number [8] has occurred
+	[42] Process [0 - ./tests_lab12/test19_1.prog] moving from the [BLOCKED] state to the [READY] state
+	[42] Running Process Information:
+		[PID: 1, Priority: 5, WakeUp: 0, Queue: USER]
+	[42] Ready-to-run processes queue:
+	USER: [2,5], [0,5]
+	DAEMONS: [3,100]
+	[42] SLEEPING Queue:
+		[--- empty queue ---]
+	[42] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[42] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[43] {0D 000 000} IRET 0 0 (PID: 1, PC: 3, Accumulator: -3, PSW: 0004 [-------------N--])
+[44] {04 005 000} TRAP 5 0 (PID: 1, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[45] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[46] Process [1 - ./tests_lab12/test19_2.prog] has the processor assigned
+[47] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[48] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[49] Clock interrupt number [9] has occurred
+[50] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[51] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[52] Clock interrupt number [10] has occurred
+[53] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[54] {0A 001 000} INC 1 0 (PID: 1, PC: 5, Accumulator: -2, PSW: 0004 [-------------N--])
+[55] {0A 002 000} INC 2 0 (PID: 1, PC: 6, Accumulator: 0, PSW: 0002 [--------------Z-])
+[56] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[57] Clock interrupt number [11] has occurred
+[58] {0D 000 000} IRET 0 0 (PID: 1, PC: 6, Accumulator: 0, PSW: 0002 [--------------Z-])
+[59] {04 004 000} TRAP 4 0 (PID: 1, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[60] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[61] Process [1 - ./tests_lab12/test19_2.prog] will transfer the control of the processor to process [2 - ./tests_lab12/test19_1.prog]
+	[61] Process [1 - ./tests_lab12/test19_2.prog] moving from the [EXECUTING] state to the [READY] state
+	[61] Process [2 - ./tests_lab12/test19_1.prog] moving from the [READY] state to the [EXECUTING] state
+	[61] Running Process Information:
+		[PID: 2, Priority: 5, WakeUp: 0, Queue: USER]
+	[61] Ready-to-run processes queue:
+	USER: [0,5], [1,5]
+	DAEMONS: [3,100]
+	[61] SLEEPING Queue:
+		[--- empty queue ---]
+	[61] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[61] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[62] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[63] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[64] Clock interrupt number [12] has occurred
+[65] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[66] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[67] Clock interrupt number [13] has occurred
+[68] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[69] {05 000 000} NOP 0 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[70] {01 00A 80D} ADD 10 -13 (PID: 2, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[71] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[72] Clock interrupt number [14] has occurred
+[73] {0D 000 000} IRET 0 0 (PID: 2, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[74] {08 00F 000} WRITE 15 0 (PID: 2, PC: 3, Accumulator: -3, PSW: 0004 [-------------N--])
+[75] {04 005 000} TRAP 5 0 (PID: 2, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[76] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[77] Process [2 - ./tests_lab12/test19_1.prog] has the processor assigned
+[78] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[79] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[80] Clock interrupt number [15] has occurred
+[81] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[82] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[83] Clock interrupt number [16] has occurred
+[84] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[85] {04 007 000} TRAP 7 0 (PID: 2, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[86] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[87] Process [2 - ./tests_lab12/test19_1.prog] moving from the [EXECUTING] state to the [BLOCKED] state
+	[87] Process [0 - ./tests_lab12/test19_1.prog] moving from the [READY] state to the [EXECUTING] state
+	[87] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 8, Queue: USER]
+	[87] Ready-to-run processes queue:
+	USER: [1,5]
+	DAEMONS: [3,100]
+	[87] SLEEPING Queue:
+		[2, 5, 20]
+	[87] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[87] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[88] {0D 000 000} IRET 0 0 (PID: 0, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[89] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[90] Clock interrupt number [17] has occurred
+[91] {0D 000 000} IRET 0 0 (PID: 0, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[92] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[93] Clock interrupt number [18] has occurred
+[94] {0D 000 000} IRET 0 0 (PID: 0, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[95] {04 005 000} TRAP 5 0 (PID: 0, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[96] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[97] Process [0 - ./tests_lab12/test19_1.prog] has the processor assigned
+[98] {0D 000 000} IRET 0 0 (PID: 0, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[99] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[100] Clock interrupt number [19] has occurred
+[101] {0D 000 000} IRET 0 0 (PID: 0, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[102] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[103] Clock interrupt number [20] has occurred
+	[103] Process [2 - ./tests_lab12/test19_1.prog] moving from the [BLOCKED] state to the [READY] state
+	[103] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 8, Queue: USER]
+	[103] Ready-to-run processes queue:
+	USER: [1,5], [2,5]
+	DAEMONS: [3,100]
+	[103] SLEEPING Queue:
+		[--- empty queue ---]
+	[103] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[103] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[104] {0D 000 000} IRET 0 0 (PID: 0, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[105] {04 003 000} TRAP 3 0 (PID: 0, PC: 7, Accumulator: -3, PSW: 0004 [-------------N--])
+[106] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[107] Process [0 - ./tests_lab12/test19_1.prog] has requested to terminate
+	[107] Process [0 - ./tests_lab12/test19_1.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[107] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][1 - ./tests_lab12/test19_2.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_1.prog]
+	[107] Partition [6: 208 -> 32] used by process [0 - ./tests_lab12/test19_1.prog] has been released
+	[107] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][1 - ./tests_lab12/test19_2.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[107] Process [1 - ./tests_lab12/test19_2.prog] moving from the [READY] state to the [EXECUTING] state
+	[107] Running Process Information:
+		[PID: 1, Priority: 5, WakeUp: 0, Queue: USER]
+	[107] Ready-to-run processes queue:
+	USER: [2,5]
+	DAEMONS: [3,100]
+	[107] SLEEPING Queue:
+		[--- empty queue ---]
+	[107] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[107] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[108] {0D 000 000} IRET 0 0 (PID: 1, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[109] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[110] Clock interrupt number [21] has occurred
+[111] {0D 000 000} IRET 0 0 (PID: 1, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[112] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[113] Clock interrupt number [22] has occurred
+[114] {0D 000 000} IRET 0 0 (PID: 1, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[115] {0A 003 000} INC 3 0 (PID: 1, PC: 8, Accumulator: 3, PSW: 0000 [----------------])
+[116] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 3, PSW: 8080 [M-------X-------])
+	[117] Clock interrupt number [23] has occurred
+[118] {0D 000 000} IRET 0 0 (PID: 1, PC: 8, Accumulator: 3, PSW: 0000 [----------------])
+[119] {0A 004 000} INC 4 0 (PID: 1, PC: 9, Accumulator: 7, PSW: 0000 [----------------])
+[120] {0A 005 000} INC 5 0 (PID: 1, PC: 10, Accumulator: 12, PSW: 0000 [----------------])
+[121] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[122] Clock interrupt number [24] has occurred
+[123] {0D 000 000} IRET 0 0 (PID: 1, PC: 10, Accumulator: 12, PSW: 0000 [----------------])
+[124] {04 005 000} TRAP 5 0 (PID: 1, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[125] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[126] Process [1 - ./tests_lab12/test19_2.prog] has the processor assigned
+[127] {0D 000 000} IRET 0 0 (PID: 1, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[128] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[129] Clock interrupt number [25] has occurred
+[130] {0D 000 000} IRET 0 0 (PID: 1, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[131] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[132] Clock interrupt number [26] has occurred
+[133] {0D 000 000} IRET 0 0 (PID: 1, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[134] {04 003 000} TRAP 3 0 (PID: 1, PC: 12, Accumulator: 12, PSW: 0000 [----------------])
+[135] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[136] Process [1 - ./tests_lab12/test19_2.prog] has requested to terminate
+	[136] Process [1 - ./tests_lab12/test19_2.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[136] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][1 - ./tests_lab12/test19_2.prog]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[136] Partition [4: 128 -> 64] used by process [1 - ./tests_lab12/test19_2.prog] has been released
+	[136] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[136] Process [2 - ./tests_lab12/test19_1.prog] moving from the [READY] state to the [EXECUTING] state
+	[136] Running Process Information:
+		[PID: 2, Priority: 5, WakeUp: 20, Queue: USER]
+	[136] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[136] SLEEPING Queue:
+		[--- empty queue ---]
+	[136] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_1.prog
+		PID: 1 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[136] Arrival Time Queue:
+		[./tests_lab12/test19_2.prog, 150, USER]
+		[./tests_lab12/test19_3.prog, 270, USER]
+[137] {0D 000 000} IRET 0 0 (PID: 2, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[138] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[139] Clock interrupt number [27] has occurred
+[140] {0D 000 000} IRET 0 0 (PID: 2, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[141] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[142] Clock interrupt number [28] has occurred
+[143] {0D 000 000} IRET 0 0 (PID: 2, PC: 5, Accumulator: -3, PSW: 0004 [-------------N--])
+[144] {04 005 000} TRAP 5 0 (PID: 2, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[145] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[146] Process [2 - ./tests_lab12/test19_1.prog] has the processor assigned
+[147] {0D 000 000} IRET 0 0 (PID: 2, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[148] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[149] Clock interrupt number [29] has occurred
+[150] {0D 000 000} IRET 0 0 (PID: 2, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[151] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[152] Clock interrupt number [30] has occurred
+	[152] Zombie process [0 -> ./tests_lab12/test19_1.prog], with size [30] and initial address [208] is removed from system
+	[152] Zombie process [1 -> ./tests_lab12/test19_2.prog], with size [30] and initial address [128] is removed from system
+	[152] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[152] Process [0 - ./tests_lab12/test19_2.prog] requests [30] memory positions
+	[152] New process [0 - ./tests_lab12/test19_2.prog] moving to the [NEW] state
+	[152] Partition [6: 208 -> 32] has been asigned to process [0 - ./tests_lab12/test19_2.prog]
+	[152] Main memory state (after allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_2.prog]
+	[152] Process [0] created from program [./tests_lab12/test19_2.prog]
+	[152] Process [0 - ./tests_lab12/test19_2.prog] moving from the [NEW] state to the [READY] state
+	[152] Running Process Information:
+		[PID: 2, Priority: 5, WakeUp: 20, Queue: USER]
+	[152] Ready-to-run processes queue:
+	USER: [0,5]
+	DAEMONS: [3,100]
+	[152] SLEEPING Queue:
+		[--- empty queue ---]
+	[152] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[152] Arrival Time Queue:
+		[./tests_lab12/test19_3.prog, 270, USER]
+	[152] Running Process Information:
+		[PID: 2, Priority: 5, WakeUp: 20, Queue: USER]
+	[152] Ready-to-run processes queue:
+	USER: [0,5]
+	DAEMONS: [3,100]
+	[152] SLEEPING Queue:
+		[--- empty queue ---]
+	[152] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[152] Arrival Time Queue:
+		[./tests_lab12/test19_3.prog, 270, USER]
+[153] {0D 000 000} IRET 0 0 (PID: 2, PC: 6, Accumulator: -3, PSW: 0004 [-------------N--])
+[154] {04 003 000} TRAP 3 0 (PID: 2, PC: 7, Accumulator: -3, PSW: 0004 [-------------N--])
+[155] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[156] Process [2 - ./tests_lab12/test19_1.prog] has requested to terminate
+	[156] Process [2 - ./tests_lab12/test19_1.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[156] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][2 - ./tests_lab12/test19_1.prog]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_2.prog]
+	[156] Partition [3: 32 -> 96] used by process [2 - ./tests_lab12/test19_1.prog] has been released
+	[156] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_2.prog]
+	[156] Process [0 - ./tests_lab12/test19_2.prog] moving from the [READY] state to the [EXECUTING] state
+	[156] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 8, Queue: USER]
+	[156] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: [3,100]
+	[156] SLEEPING Queue:
+		[--- empty queue ---]
+	[156] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[156] Arrival Time Queue:
+		[./tests_lab12/test19_3.prog, 270, USER]
+[157] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[158] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[159] Clock interrupt number [31] has occurred
+[160] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[161] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[162] Clock interrupt number [32] has occurred
+[163] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[164] {05 000 000} NOP 0 0 (PID: 0, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[165] {01 00A 80D} ADD 10 -13 (PID: 0, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[166] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[167] Clock interrupt number [33] has occurred
+[168] {0D 000 000} IRET 0 0 (PID: 0, PC: 2, Accumulator: -3, PSW: 0004 [-------------N--])
+[169] {08 00F 000} WRITE 15 0 (PID: 0, PC: 3, Accumulator: -3, PSW: 0004 [-------------N--])
+[170] {04 005 000} TRAP 5 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[171] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[172] Process [0 - ./tests_lab12/test19_2.prog] has the processor assigned
+[173] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[174] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[175] Clock interrupt number [34] has occurred
+[176] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[177] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -3, PSW: 8084 [M-------X----N--])
+	[178] Clock interrupt number [35] has occurred
+[179] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: -3, PSW: 0004 [-------------N--])
+[180] {0A 001 000} INC 1 0 (PID: 0, PC: 5, Accumulator: -2, PSW: 0004 [-------------N--])
+[181] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: -2, PSW: 8084 [M-------X----N--])
+	[182] Clock interrupt number [36] has occurred
+[183] {0D 000 000} IRET 0 0 (PID: 0, PC: 5, Accumulator: -2, PSW: 0004 [-------------N--])
+[184] {0A 002 000} INC 2 0 (PID: 0, PC: 6, Accumulator: 0, PSW: 0002 [--------------Z-])
+[185] {04 004 000} TRAP 4 0 (PID: 0, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[186] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+[188] {0D 000 000} IRET 0 0 (PID: 0, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[189] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[190] Clock interrupt number [37] has occurred
+[191] {0D 000 000} IRET 0 0 (PID: 0, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[192] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[193] Clock interrupt number [38] has occurred
+[194] {0D 000 000} IRET 0 0 (PID: 0, PC: 7, Accumulator: 0, PSW: 0002 [--------------Z-])
+[195] {0A 003 000} INC 3 0 (PID: 0, PC: 8, Accumulator: 3, PSW: 0000 [----------------])
+[196] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 3, PSW: 8080 [M-------X-------])
+	[197] Clock interrupt number [39] has occurred
+[198] {0D 000 000} IRET 0 0 (PID: 0, PC: 8, Accumulator: 3, PSW: 0000 [----------------])
+[199] {0A 004 000} INC 4 0 (PID: 0, PC: 9, Accumulator: 7, PSW: 0000 [----------------])
+[200] {0A 005 000} INC 5 0 (PID: 0, PC: 10, Accumulator: 12, PSW: 0000 [----------------])
+[201] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[202] Clock interrupt number [40] has occurred
+[203] {0D 000 000} IRET 0 0 (PID: 0, PC: 10, Accumulator: 12, PSW: 0000 [----------------])
+[204] {04 005 000} TRAP 5 0 (PID: 0, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[205] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[206] Process [0 - ./tests_lab12/test19_2.prog] has the processor assigned
+[207] {0D 000 000} IRET 0 0 (PID: 0, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[208] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[209] Clock interrupt number [41] has occurred
+[210] {0D 000 000} IRET 0 0 (PID: 0, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[211] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[212] Clock interrupt number [42] has occurred
+[213] {0D 000 000} IRET 0 0 (PID: 0, PC: 11, Accumulator: 12, PSW: 0000 [----------------])
+[214] {04 003 000} TRAP 3 0 (PID: 0, PC: 12, Accumulator: 12, PSW: 0000 [----------------])
+[215] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: 12, PSW: 8080 [M-------X-------])
+	[216] Process [0 - ./tests_lab12/test19_2.prog] has requested to terminate
+	[216] Process [0 - ./tests_lab12/test19_2.prog] moving from the [EXECUTING] state to the [EXIT] state
+	[216] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][0 - ./tests_lab12/test19_2.prog]
+	[216] Partition [6: 208 -> 32] used by process [0 - ./tests_lab12/test19_2.prog] has been released
+	[216] Main memory state (after releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[216] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[216] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[216] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[216] SLEEPING Queue:
+		[--- empty queue ---]
+	[216] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+	[216] Arrival Time Queue:
+		[./tests_lab12/test19_3.prog, 270, USER]
+[217] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[218] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[219] Clock interrupt number [43] has occurred
+[220] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[221] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[222] Clock interrupt number [44] has occurred
+[223] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[224] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[225] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[226] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[227] Clock interrupt number [45] has occurred
+[228] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[229] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[230] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[231] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[232] Clock interrupt number [46] has occurred
+[233] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[234] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[235] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[236] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[237] Clock interrupt number [47] has occurred
+[238] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[239] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[240] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[241] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[242] Clock interrupt number [48] has occurred
+[243] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[244] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[245] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[246] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[247] Clock interrupt number [49] has occurred
+[248] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[249] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[250] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[251] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[252] Clock interrupt number [50] has occurred
+[253] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[254] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[255] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[256] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[257] Clock interrupt number [51] has occurred
+[258] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[259] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[260] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[261] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[262] Clock interrupt number [52] has occurred
+[263] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[264] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[265] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[266] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[267] Clock interrupt number [53] has occurred
+[268] {0D 000 000} IRET 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[269] {06 801 000} JUMP -1 0 (PID: 3, PC: 1, Accumulator: 2021, PSW: 0080 [--------X-------])
+[270] {05 000 000} NOP 0 0 (PID: 3, PC: 2, Accumulator: 2021, PSW: 0080 [--------X-------])
+[271] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[272] Clock interrupt number [54] has occurred
+	[272] Main memory state (before allocating memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[272] Process [1 - ./tests_lab12/test19_3.prog] requests [100] memory positions
+	[272] ERROR: Program [./tests_lab12/test19_3.prog] is too big
+[273] {0D 000 000} IRET 0 0 (PID: 3, PC: 3, Accumulator: 2021, PSW: 0080 [--------X-------])
+[274] {04 003 000} TRAP 3 0 (PID: 3, PC: 4, Accumulator: 2021, PSW: 0080 [--------X-------])
+[275] {0C 002 000} OS 2 0 (PID: 3, PC: 242, Accumulator: 2021, PSW: 8080 [M-------X-------])
+	[276] Process [3 - SystemIdleProcess] has requested to terminate
+	[276] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+	[276] Main memory state (before releasing memory):
+		[0] [0 -> 4][3 - SystemIdleProcess]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[276] Partition [0: 0 -> 4] used by process [3 - SystemIdleProcess] has been released
+	[276] Main memory state (after releasing memory):
+		[0] [0 -> 4][AVAILABLE]
+		[1] [4 -> 12][AVAILABLE]
+		[2] [16 -> 16][AVAILABLE]
+		[3] [32 -> 96][AVAILABLE]
+		[4] [128 -> 64][AVAILABLE]
+		[5] [192 -> 16][AVAILABLE]
+		[6] [208 -> 32][AVAILABLE]
+	[276] The system will shut down now...
+	[276] Running Process Information:
+		[--- No running process ---]
+	[276] Ready-to-run processes queue:
+	USER: 
+	DAEMONS: 
+	[276] SLEEPING Queue:
+		[--- empty queue ---]
+	[276] PID association with program's name:
+		PID: 0 -> ./tests_lab12/test19_2.prog
+		PID: 2 -> ./tests_lab12/test19_1.prog
+		PID: 3 -> SystemIdleProcess
+[277] {0D 000 000} IRET 0 0 (PID: -1, PC: 241, Accumulator: 2021, PSW: 8080 [M-------X-------])
+[278] {0B 000 000} HALT 0 0 (PID: -1, PC: 241, Accumulator: 2021, PSW: 8081 [M-------X------S])
+[278] END of the simulation

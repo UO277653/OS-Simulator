@@ -1,0 +1,12 @@
+// Program that stores, successively, the powers of 2, in ascending order, 
+// from 1 (2^0) to 1024 (2^10), in the memory cell in address 128. 
+50
+ADD 1 0
+WRITE 128
+SHIFT -1
+WRITE 128
+INC -1024
+ZJUMP 3
+INC 1024
+JUMP -5
+HALT
